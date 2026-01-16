@@ -1,0 +1,26 @@
+{
+    "base_url": "https://www.truckit.net/",
+    "browser": "chrome",
+    "headless": false,
+    "implicit_wait": 10,
+    "explicit_wait": 25,
+    "test_data": {
+        "origin": "Brisbane",
+        "destination": "Sydney",
+        "category": "Pallets and Packages",
+        "freight": {
+            "description": "Coffee Jars",
+            "pallet_size": "1",
+            "height": "20",
+            "weight": "3"
+        },
+        "facilities": {
+            "loading": "Residential",
+            "unloading": "Residential"
+        },
+        "invalid_credentials": {
+            "email": "invalid@example.com",
+            "password": "wrongpassword"
+        }
+    }
+}
