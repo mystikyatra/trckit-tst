@@ -1,0 +1,73 @@
+2026-01-21 12:02:10,606 - truckit_automation - INFO - ================================================================================
+2026-01-21 12:02:10,606 - truckit_automation - INFO - TRUCKIT AUTOMATION FRAMEWORK - TEST EXECUTION STARTED
+2026-01-21 12:02:10,606 - truckit_automation - INFO - Log file: automation_test_20260121_120210.log
+2026-01-21 12:02:10,606 - truckit_automation - INFO - ================================================================================
+2026-01-21 12:02:10,792 - truckit_automation - INFO - Loading test configuration from config.json
+2026-01-21 12:02:10,793 - truckit_automation - INFO - Configuration loaded successfully. Base URL: https://www.truckit.net/
+2026-01-21 12:02:10,794 - truckit_automation - INFO - Setting up WebDriver instance
+2026-01-21 12:02:10,794 - WDM - INFO - ====== WebDriver manager ======
+2026-01-21 12:02:11,735 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-21 12:02:12,282 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-21 12:02:12,790 - WDM - INFO - Driver [C:\Users\pawan.kharel\.wdm\drivers\chromedriver\win64\144.0.7559.96\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2026-01-21 12:02:13,879 - truckit_automation - INFO - WebDriver setup completed successfully
+2026-01-21 12:02:13,879 - truckit_automation - INFO - ============================================================
+2026-01-21 12:02:13,879 - truckit_automation - INFO - STARTING TEST: TestTruckitQuoteFlow.test_quote_flow_with_negative_login
+2026-01-21 12:02:13,879 - truckit_automation - INFO - ============================================================
+2026-01-21 12:02:13,880 - truckit_automation.tests - INFO - Starting test: Complete quote flow with negative login
+2026-01-21 12:02:13,880 - truckit_automation.tests - INFO - Test data loaded: Origin=Brisbane, Destination=Sydney
+2026-01-21 12:02:13,880 - truckit_automation.tests - INFO - Step 1: Navigating to home page and selecting category
+2026-01-21 12:02:13,880 - truckit_automation.pages.home_page - INFO - Navigating to home page: https://www.truckit.net/
+2026-01-21 12:02:16,505 - truckit_automation.pages.home_page - INFO - Successfully navigated to home page
+2026-01-21 12:02:16,505 - truckit_automation.pages.home_page - INFO - Selecting category: Pallets and Packages
+2026-01-21 12:02:16,899 - truckit_automation.pages.home_page - INFO - Successfully selected category: Pallets and Packages
+2026-01-21 12:02:16,899 - truckit_automation.tests - INFO - Step 2: Entering origin and destination locations
+2026-01-21 12:02:16,899 - truckit_automation.pages.home_page - INFO - Entering origin location: Brisbane
+2026-01-21 12:02:18,182 - truckit_automation.pages.home_page - INFO - Successfully entered origin location: Brisbane
+2026-01-21 12:02:18,182 - truckit_automation.pages.home_page - INFO - Entering destination location: Sydney
+2026-01-21 12:02:18,663 - truckit_automation.pages.home_page - INFO - Successfully entered destination location: Sydney
+2026-01-21 12:02:18,663 - truckit_automation.tests - INFO - Step 3: Clicking 'Get Quote' button
+2026-01-21 12:02:18,663 - truckit_automation.pages.home_page - INFO - Clicking 'Get Quote' button
+2026-01-21 12:02:20,868 - truckit_automation.pages.home_page - INFO - Successfully clicked 'Get Quote' button and switched to new tab
+2026-01-21 12:02:20,868 - truckit_automation.tests - INFO - Step 4: Filling freight details
+2026-01-21 12:02:20,868 - truckit_automation.pages.quote_page - INFO - Selecting freight category with value: 53
+2026-01-21 12:02:21,042 - truckit_automation.pages.quote_page - INFO - Successfully selected freight category: 53
+2026-01-21 12:02:21,042 - truckit_automation.pages.quote_page - INFO - Entering freight description: Coffee Jars
+2026-01-21 12:02:21,929 - truckit_automation.pages.quote_page - INFO - Successfully entered freight description
+2026-01-21 12:02:21,929 - truckit_automation.pages.quote_page - INFO - Selecting pallet size with value: 1
+2026-01-21 12:02:22,254 - truckit_automation.pages.quote_page - INFO - Successfully selected pallet size: 1
+2026-01-21 12:02:22,254 - truckit_automation.pages.quote_page - INFO - Entering pallet height: 20
+2026-01-21 12:02:22,542 - truckit_automation.pages.quote_page - INFO - Successfully entered pallet height
+2026-01-21 12:02:22,542 - truckit_automation.pages.quote_page - INFO - Entering pallet weight: 3
+2026-01-21 12:02:22,784 - truckit_automation.pages.quote_page - INFO - Successfully entered pallet weight
+2026-01-21 12:02:22,784 - truckit_automation.tests - INFO - Step 5: Configuring sender/receiver and facilities
+2026-01-21 12:02:22,785 - truckit_automation.pages.quote_page - INFO - Clicking sender/receiver button
+2026-01-21 12:02:23,355 - truckit_automation.pages.quote_page - INFO - Successfully clicked sender/receiver button
+2026-01-21 12:02:23,356 - truckit_automation.pages.quote_page - INFO - Selecting loading facility: Residential
+2026-01-21 12:02:23,515 - truckit_automation.pages.quote_page - INFO - Successfully selected loading facility: Residential
+2026-01-21 12:02:23,515 - truckit_automation.pages.quote_page - INFO - Selecting unloading facility: Residential
+2026-01-21 12:02:23,636 - truckit_automation.pages.quote_page - INFO - Successfully selected unloading facility: Residential
+2026-01-21 12:02:23,637 - truckit_automation.tests - INFO - Step 6: Selecting collection and delivery dates
+2026-01-21 12:02:23,637 - truckit_automation.pages.quote_page - INFO - Selecting collection date option
+2026-01-21 12:02:24,181 - truckit_automation.pages.quote_page - INFO - Successfully selected collection date option
+2026-01-21 12:02:24,181 - truckit_automation.pages.quote_page - INFO - Selecting delivery date option
+2026-01-21 12:02:24,758 - truckit_automation.pages.quote_page - INFO - Successfully selected delivery date option
+2026-01-21 12:02:24,758 - truckit_automation.tests - INFO - Step 7: Proceeding to authentication
+2026-01-21 12:02:24,758 - truckit_automation.pages.quote_page - INFO - Clicking continue button
+2026-01-21 12:02:25,316 - truckit_automation.pages.quote_page - INFO - Successfully clicked continue button
+2026-01-21 12:02:25,316 - truckit_automation.pages.quote_page - INFO - Clicking login button
+2026-01-21 12:02:26,998 - truckit_automation.pages.quote_page - INFO - Successfully clicked login button
+2026-01-21 12:02:26,999 - truckit_automation.tests - INFO - Step 8: Attempting negative login with invalid credentials
+2026-01-21 12:02:26,999 - truckit_automation.pages.login_page - INFO - Entering email: invalid@example.com
+2026-01-21 12:02:27,135 - truckit_automation.pages.login_page - INFO - Successfully entered email
+2026-01-21 12:02:27,135 - truckit_automation.pages.login_page - INFO - Entering password (masked for security)
+2026-01-21 12:02:27,326 - truckit_automation.pages.login_page - INFO - Successfully entered password
+2026-01-21 12:02:27,326 - truckit_automation.pages.login_page - INFO - Waiting for reCAPTCHA to be solved manually
+2026-01-21 12:02:37,693 - truckit_automation.pages.login_page - INFO - reCAPTCHA solved successfully, proceeding with login
+2026-01-21 12:02:37,693 - truckit_automation.pages.login_page - INFO - Clicking login submit button
+2026-01-21 12:02:38,251 - truckit_automation.pages.login_page - INFO - Successfully clicked login submit button
+2026-01-21 12:02:38,252 - truckit_automation.tests - INFO - Step 9: Verifying negative login result
+2026-01-21 12:02:43,252 - truckit_automation.pages.login_page - INFO - Checking if error message is displayed
+2026-01-21 12:02:43,318 - truckit_automation.pages.login_page - INFO - Error message is displayed
+2026-01-21 12:02:43,324 - truckit_automation - WARNING - TEST STATUS UNKNOWN: TestTruckitQuoteFlow.test_quote_flow_with_negative_login
+2026-01-21 12:02:43,324 - truckit_automation - INFO - Tearing down WebDriver instance
+2026-01-21 12:02:45,592 - truckit_automation - INFO - WebDriver teardown completed

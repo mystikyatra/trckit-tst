@@ -10,9 +10,9 @@ def setup_logging():
     logs_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'logs')
     os.makedirs(logs_dir, exist_ok=True)
 
-    # Generate daily log filename (YYYYMMDD format)
-    today = datetime.now().strftime("%Y%m%d")
-    log_filename = f"automation_test_{today}.log"
+    # Generate log filename with timestamp for each run (YYYYMMDD_HHMMSS format)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"automation_test_{timestamp}.log"
     log_filepath = os.path.join(logs_dir, log_filename)
 
     # Configure logging with file append mode
@@ -66,7 +66,12 @@ def cleanup_old_logs(logs_dir=None, days_to_keep=7, verbose=False):
             try:
                 filename = log_file.name
                 date_str = filename.replace('automation_test_', '').replace('.log', '')
-                file_date = datetime.strptime(date_str, '%Y%m%d')
+                # Try new format first (with time)
+                try:
+                    file_date = datetime.strptime(date_str, '%Y%m%d_%H%M%S')
+                except ValueError:
+                    # Try old format (date only)
+                    file_date = datetime.strptime(date_str, '%Y%m%d')
 
                 if file_date < cutoff_date:
                     file_size = log_file.stat().st_size

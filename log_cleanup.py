@@ -34,14 +34,20 @@ def get_log_directory():
 def parse_log_filename(filename):
     """
     Parse log filename to extract date
-    Expected format: automation_test_YYYYMMDD.log
+    Expected formats: automation_test_YYYYMMDD.log or automation_test_YYYYMMDD_HHMMSS.log
     """
     try:
         # Remove 'automation_test_' prefix and '.log' suffix
         date_str = filename.replace('automation_test_', '').replace('.log', '')
-        # Parse YYYYMMDD format
-        log_date = datetime.strptime(date_str, '%Y%m%d')
-        return log_date
+        
+        # Try new format first (with time)
+        try:
+            log_date = datetime.strptime(date_str, '%Y%m%d_%H%M%S')
+            return log_date
+        except ValueError:
+            # Try old format (date only)
+            log_date = datetime.strptime(date_str, '%Y%m%d')
+            return log_date
     except ValueError as e:
         logger.warning(f"Could not parse date from filename: {filename}. Error: {e}")
         return None
